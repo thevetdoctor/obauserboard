@@ -1,11 +1,13 @@
 import React, { useReducer } from 'react';
-import { render } from 'react-dom';
-import { useSelector } from 'react-redux';
-import { Calendar, DatePicker } from 'antd';
-// import Calendar from './Calendar';
-import moment from 'moment';
+import { DatePicker } from 'antd';
+// import moment from 'moment';
 import 'antd/dist/antd.css';
-import uuidv5 from 'uuid/v5';
+// import uuidv5 from 'uuid/v5';
+
+// import { render } from 'react-dom';
+// import { useSelector } from 'react-redux';
+// import { Calendar, DatePicker } from 'antd';
+// import Calendar from './Calendar';
 
 
 const Form = ({ onClick }) => {

@@ -1,6 +1,5 @@
-export const apiData = async (user) => {
+export const apiData = async (url, user) => {
   
-    let url = `https://us-central1-quickstart-1559031126554.cloudfunctions.net/createNewUser?firstname=${user.firstname}&lastname=${user.lastname}&birthday=${user.birthday}&age=${user.age}&hobby=${user.hobby}`;
   
     // let url = "https://jsonplaceholder.typicode.com/users";
   

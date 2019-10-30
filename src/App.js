@@ -19,7 +19,7 @@ const errorMessage = useSelector(state => state.errorMessage);
 const users = useSelector(state => state.users);
 const formview = useSelector(state => state.formView);
 const apiData = useSelector(state => state.apiData);
-const apiError = useSelector(state => state.error);
+// const apiError = useSelector(state => state.error);
 const loading = useSelector(state => state.loading);
 
 const handleDelete = (id) => {
@@ -77,7 +77,7 @@ let usersInState = [ ...users ];
 let userExist = usersInState.filter(user => user['firstname'] === formValues['firstname'] && user.lastname === formValues.lastname);
 
 if (userExist.length) {
-   error = 'User exists already';
+   let error = 'User exists already';
   
       store.dispatch({
         type: 'LOG_ERROR',
@@ -137,9 +137,8 @@ for (let item in formValues) {
 
 const populate = () => {
   console.log('populate is disabled for now');
-  return;
-// let newUser = JSON.parse(localStorage.getItem('usersDB'));
-    // console.log(newUser.apiData.length);
+let newUser = JSON.parse(localStorage.getItem('usersDB'));
+    console.log(newUser.apiData.length);
     let count = Math.floor(Math.random() * 5);
     if (apiData) {
     store.dispatch({
@@ -151,6 +150,7 @@ const populate = () => {
         hobby: 'reading'}
     });
     }
+  return;
 }
 
     return (

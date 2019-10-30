@@ -1,7 +1,9 @@
-import * as firebase from "firebase";
-import "firebase/database";
-import config from "./config";
+import firebase from 'firebase/app';
+import 'firebase/database';
+import config from "./conf";
 
+
+// console.log(config);
 // export default firebase.initializeApp(config);
 export default firebase.initializeApp(config);
 

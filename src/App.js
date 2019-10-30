@@ -114,12 +114,12 @@ for (let item in formValues) {
     }
   }
 } 
-  let  newUser = {firstname,
+  let  user = {firstname,
         lastname,
         birthday,
         age,
         hobby};
-  let newState = [...state.users, newUser];
+  let newState = [...state.users, user];
 
   error = '';
   store.dispatch({
@@ -129,10 +129,10 @@ for (let item in formValues) {
 
    store.dispatch({
       type: 'ADD_USER',
-      newUser,
+      user,
    });
 
-  console.log('submitted', 'newUser =>', newUser, 'newState =>', newState);
+  console.log('submitted', 'newUser =>', user, 'newState =>', newState);
 } 
 
 const populate = () => {
@@ -143,7 +143,7 @@ let newUser = JSON.parse(localStorage.getItem('usersDB'));
     if (apiData) {
     store.dispatch({
       type: 'ADD_USER',
-      newUser: apiData[count] || {firstname: 'Toke',
+        user: apiData[count] || {firstname: 'Toke',
         lastname: 'Ode',
         birthday: '2019-09-16', 
         age: 4, 

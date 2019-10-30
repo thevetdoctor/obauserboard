@@ -7,7 +7,7 @@ const apiData = async (url) => {
       const res = await fetch(url, { method: 'GET', headers: { 'Content-Type': 'application/json' }});
   
       const json = await res.json();
-      console.log('json response', json);
+      // console.log('json response', json);
       return json;
     } catch (e) {
       console.log("error response", e);

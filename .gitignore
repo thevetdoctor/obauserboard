@@ -6,6 +6,7 @@
 .pnp.js
 
 # conf files
+/src/firebase/config.js
 /src/firebase/conf.js
 
 # testing

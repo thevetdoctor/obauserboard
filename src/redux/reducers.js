@@ -1,6 +1,7 @@
 import userActions from './actions';
 import apiData from './api';
 
+
 const initialState = JSON.parse(localStorage.getItem('usersDB')) || {
     name: 'React Challenge by Enye!',
     errorMessage: '', 
@@ -40,24 +41,20 @@ const updateUserReducer = (state = initialState, actions) => {
   case userActions.addUser.type:
 
 
-  const { newUser } = actions;
+  const { user } = actions;
 
-  let url = `https://us-central1-quickstart-1559031126554.cloudfunctions.net/createNewUser?firstname=${newUser.firstname}&lastname=${newUser.lastname}&birthday=${newUser.birthday}&age=${newUser.age}&hobby=${newUser.hobby}`;
+  let url = `https://us-central1-quickstart-1559031126554.cloudfunctions.net/createNewUser?firstname=${user.firstname}&lastname=${user.lastname}&birthday=${user.birthday}&age=${user.age}&hobby=${user.hobby}`;
 
     apiData(url)
-    .then(data => console.log('Data sent to DB =>', data));
+    .then(data => {
+      console.log('Data sent to DB =>', data);
 
-    // console.log('data', data);
-
-    // let newUserList = [ ...state.users ];
-    // // newUserList.push(DBUser);
-    // newUserList.push(newUser);
-
-    // let newState = Object.assign({}, state, {
-    //   ...state, users: newUserList,
-    //   });
-    // console.log('new user added', newUser);
-    // localStorage.setItem('usersDB', JSON.stringify(newState));
+      let newState0 = Object.assign({}, state, {
+        ...state, usersBackup: [ data.newUser ],
+        });
+      console.log('new user added', data.newUser);
+      localStorage.setItem('usersDB', JSON.stringify(newState0));
+    });
 
   return state; 
 

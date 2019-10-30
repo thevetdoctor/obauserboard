@@ -1,14 +1,17 @@
 // import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
-import { call, put, takeLatest } from 'redux-saga/effects';
-import { apiData } from './api';
+// import { call, put, takeLatest } from 'redux-saga/effects';
+import { put, takeLatest } from 'redux-saga/effects';
+// import apiData from './api';
 
 
 
 function* getAPIData(type = 'GET_DATA', newUser) {
 
    try {
-      const data = yield call(apiData, newUser);
+      // const data = yield call(apiData, newUser);
       // const data = yield apiData();
+
+      const data = yield {};
 
       // console.log(data);
 

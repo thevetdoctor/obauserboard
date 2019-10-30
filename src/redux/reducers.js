@@ -1,5 +1,5 @@
 import userActions from './actions';
-import { apiData } from './api';
+import apiData from './api';
 
 const initialState = JSON.parse(localStorage.getItem('usersDB')) || {
     name: 'React Challenge by Enye!',
@@ -44,7 +44,7 @@ const updateUserReducer = (state = initialState, actions) => {
 
   let url = `https://us-central1-quickstart-1559031126554.cloudfunctions.net/createNewUser?firstname=${newUser.firstname}&lastname=${newUser.lastname}&birthday=${newUser.birthday}&age=${newUser.age}&hobby=${newUser.hobby}`;
 
-    apiData(url, newUser)
+    apiData(url)
     .then(data => console.log('Data sent to DB =>', data));
 
     // console.log('data', data);

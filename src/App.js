@@ -158,9 +158,9 @@ let newUser = JSON.parse(localStorage.getItem('usersDB'));
         <Hello name={name} />
         <div className='links'>
           <div>
-            <span><a href='https://www.facebook.com/huntiololo' target="_blank"><Icon className='fb logo' type="facebook" /></a></span>
-            <span><a href='https://www.twitter.com/animalworldng' target='_blank'><Icon className='twitter logo' type="twitter" /></a></span>
-            <span><a href='https://www.instagram.com/animalworldng' target='_blank'><Icon className='insta logo' type="instagram" /></a></span>
+            <span><a href='https://www.facebook.com/huntiololo' target="_blank" rel="noopener noreferrer"><Icon className='fb logo' type="facebook" /></a></span>
+            <span><a href='https://www.twitter.com/animalworldng' target='_blank' rel="noopener noreferrer"><Icon className='twitter logo' type="twitter" /></a></span>
+            <span><a href='https://www.instagram.com/animalworldng' target='_blank' rel="noopener noreferrer"><Icon className='insta logo' type="instagram" /></a></span>
           </div>
         <div>
             {!formview ?

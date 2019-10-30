@@ -1,4 +1,4 @@
-export const apiData = async (url, user) => {
+const apiData = async (url) => {
   
   
     // let url = "https://jsonplaceholder.typicode.com/users";
@@ -13,4 +13,6 @@ export const apiData = async (url, user) => {
       console.log("error response", e);
     }
   };
+
+  export default apiData;
   

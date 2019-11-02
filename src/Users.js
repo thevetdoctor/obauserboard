@@ -16,8 +16,8 @@ const { users } = props;
           <div className='user-table'>
                 {window.screen.width < 288 ?
 
-            <div style={{fontWeight: 'bold'}}>
-                <span>No</span>
+            <div>
+                <span>UserID</span>
                 <span>Firstname</span>
                 <span>Lastname</span>
                 <span>Birthday</span>
@@ -27,8 +27,8 @@ const { users } = props;
                 <Icon type="delete" style={{backgroundColor: 'red', borderRadius: '10px', padding: '3px'}} />
                 </span>
             </div>  :
-            <div style={{fontWeight: 'bold'}}>
-                <span>No</span>
+            <div>
+                <span>UserID</span>
                 <span>Fname</span>
                 <span>Lname</span>
                 <span>Bday</span>

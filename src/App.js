@@ -11,6 +11,7 @@ import './style.css';
 
 const App = () => {
 
+  // eslint-disable-next-line
 const state = store.getState();
 // store.subscribe((state) => console.log('calling subscribe!'));
 
@@ -69,7 +70,7 @@ const viewForm = (formview) => {
 }
 
 const handleClick = (formValues) => {
-  console.log('input =>', formValues);
+  // console.log('input =>', formValues);
   
 const { firstname, lastname, birthday, age, hobby } = formValues;
 
@@ -85,8 +86,8 @@ if (userExist.length) {
       });
   return false;
 }
-console.log('user exist', userExist, usersInState);
-console.log(Object.values(formValues));
+// console.log('user exist', userExist, usersInState);
+// console.log(Object.values(formValues));
 let error = '';
 for (let item in formValues) {
     if (formValues[item] === '') {
@@ -119,7 +120,7 @@ for (let item in formValues) {
         birthday,
         age,
         hobby};
-  let newState = [...state.users, user];
+  // let newState = [...state.users, user];
 
   error = '';
   store.dispatch({
@@ -128,26 +129,27 @@ for (let item in formValues) {
       });
 
    store.dispatch({
-      type: 'ADD_USER',
+      type: 'LOAD_DATA',
       user,
    });
 
-  console.log('submitted', 'newUser =>', user, 'newState =>', newState);
+  // console.log('submitted', 'newUser =>', user);
 } 
 
 const populate = () => {
-  console.log('populate is disabled for now');
-let newUser = JSON.parse(localStorage.getItem('usersDB'));
-    console.log(newUser.apiData.length);
+  // console.log('populate is disabled for now');
+// let newUser = JSON.parse(localStorage.getItem('usersDB'));
+    // console.log(newUser.apiData.length);
     let count = Math.floor(Math.random() * 5);
     if (apiData) {
+    // console.log(apiData[count], newUser);
     store.dispatch({
-      type: 'ADD_USER',
-        user: apiData[count] || {firstname: 'Toke',
-        lastname: 'Ode',
-        birthday: '2019-09-16', 
-        age: 4, 
-        hobby: 'reading'}
+      type: 'LOAD_DATA',
+      user: apiData[count] || {firstname: 'Oyetoke',
+                                lastname: 'Oderanti',
+                                birthday: '2019-09-16', 
+                                age: 38, 
+                                hobby: 'reading'}
     });
     }
   return;
@@ -164,7 +166,7 @@ let newUser = JSON.parse(localStorage.getItem('usersDB'));
           </div>
         <div>
             {!formview ?
-              <span className='btn' onClick={viewForm}><Icon type="plus-circle" /></span>
+              <span className='btn show-form' onClick={viewForm}><Icon type="plus-circle" /><span>Show form</span></span>
               :
               <span className='btn' onClick={viewForm}><Icon type="close-circle" /></span>
             }
@@ -172,9 +174,9 @@ let newUser = JSON.parse(localStorage.getItem('usersDB'));
                   <span className='btn'><Icon type="loading" /></span>
               :
                 <span>{(apiData && apiData.length) ?
-                <span className='btn' onClick={() => populate()}><Icon type="login"/></span>
+                <span className='btn populate-data' onClick={() => populate()}><Icon type="login"/></span>
                    :
-                  <span className='btn' onClick={() => handleLoading()}><Icon type="cloud-download"/></span>
+                  <span className='btn random-data' onClick={() => handleLoading()}><Icon type="cloud-download"/></span>
 
                   
                 }</span>
@@ -195,7 +197,7 @@ let newUser = JSON.parse(localStorage.getItem('usersDB'));
         NB: Click <span style={{color: '#fff'}}><Icon type='delete'/></span> to delete a user from the record!
         </p>
         <p>
-          .... Development in progress ...!!!
+          {/* .... Development in progress ...!!! */}
         </p>
         
       </div>

@@ -19,7 +19,7 @@ body {
   font-size: 1em;
   /* font-weight: bold; */
   box-sizing: border-box;
-  width: 70vw;
+  width: 80vw;
   height: 100vh;
   margin: 0 auto;
   padding: 0;
@@ -93,7 +93,8 @@ input.empty::placeholder {
   overflow: auto;
 }
 
-.user-table span:nth-child(1), .user-table span:nth-last-child(1) {
+/* .user-table span:nth-child(1),  */
+.user-table span:nth-last-child(3), .user-table span:nth-last-child(1) {
   flex-basis: 10%;
   flex-shrink: 2;
 }
@@ -163,6 +164,15 @@ hr {
   border-radius: 0.2em;
 }
 
+.show-form span {
+  display: none;
+}
+
+.show-form:hover i {
+  display: block;
+}
+
+
 @media screen and (max-width: 500px) {
   body {
     width: 90vw;
@@ -181,10 +191,10 @@ hr {
   flex-shrink: 2;
 }
 
-.user-table span:nth-child(1) {
+/* .user-table span:nth-child(1) {
   flex-basis: 10%;
   flex-shrink: 2;
-}
+} */
 
 .form-selector {
   width: 86%;
@@ -229,6 +239,8 @@ input {
 .user-table {
   font-size: 0.8em;
 }
+
+
 
 .user-table span {
   flex-basis: 20%;

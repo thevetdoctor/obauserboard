@@ -4,6 +4,7 @@ const userActions = {
     deleteUsers: { type: 'DELETE_USERS'},
     logError: { type: 'LOG_ERROR'},
     formView: { type: 'FORM_VIEW'},
+    loadData: { type: 'LOAD_DATA'},
     getData: { type: 'GET_DATA'},
     loading: { type: 'LOADING'},
     dataSuccess: { type: 'DATA_SUCCESS'},

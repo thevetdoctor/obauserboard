@@ -3,8 +3,6 @@ import 'firebase/database';
 import config from "./conf";
 
 
-// console.log(config);
-// export default firebase.initializeApp(config);
 export default firebase.initializeApp(config);
 
 

@@ -1,9 +1,9 @@
 import userActions from './actions';
-import apiData from './api';
+import getID from './getID';
 
 
 const initialState = JSON.parse(localStorage.getItem('usersDB')) || {
-    name: 'React Challenge by Enye!',
+    name: 'User Board!',
     errorMessage: '', 
     formView: true, 
     loading: false,  
@@ -39,27 +39,26 @@ const updateUserReducer = (state = initialState, actions) => {
 
   switch(actions.type) {
   case userActions.addUser.type:
+      // console.log('Data sent to DB =>', actions.data);
 
+      const { newUser } = actions.data;
+      let newData = Object.assign({}, newUser);
 
-  const { user } = actions;
-
-  let url = `https://us-central1-quickstart-1559031126554.cloudfunctions.net/createNewUser?firstname=${user.firstname}&lastname=${user.lastname}&birthday=${user.birthday}&age=${user.age}&hobby=${user.hobby}`;
-
-    apiData(url)
-    .then(data => {
-      console.log('Data sent to DB =>', data);
-
+      let userWithID = getID(newData);
+      let newUserList0 = [ ...state.users ];
+          newUserList0.push(userWithID);
+      
       let newState0 = Object.assign({}, state, {
-        ...state, usersBackup: [ data.newUser ],
+        ...state, users: newUserList0,
         });
-      console.log('new user added', data.newUser);
+      // console.log('new user added', newUser, userWithID);
       localStorage.setItem('usersDB', JSON.stringify(newState0));
-    });
 
-  return state; 
+  return newState0; 
 
+  
   case userActions.deleteUser.type:
-    const { id }= actions;
+    const { id } = actions;
     console.log('Deleting user', id + 1);
     let newUserList = [ ...state.users ];
     newUserList.splice(id, 1);
@@ -168,4 +167,4 @@ const updateUserReducer = (state = initialState, actions) => {
   }
 };
 
-export default updateUserReducer;
+export default updateUserReducer; 

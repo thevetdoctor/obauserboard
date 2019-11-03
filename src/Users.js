@@ -10,6 +10,8 @@ const Users = (props) => {
 let { users } = props;
 // let newUserList = [];
 // const users = users.map(x => users.includes(x.firstname)
+users = users.filter(x => x !== undefined);
+users = users.filter(x => x !== null);
 users = users.filter((thing, index, self) => self.findIndex(t => t.firstname === thing.firstname && t.lastname === thing.lastname) === index);
 
     return (

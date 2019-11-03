@@ -7,7 +7,11 @@ import { Icon } from 'antd';
 
 const Users = (props) => {
 // const users = useSelector(state => state.users);
-const { users } = props;
+let { users } = props;
+// let newUserList = [];
+// const users = users.map(x => users.includes(x.firstname)
+users = users.filter((thing, index, self) => self.findIndex(t => t.firstname === thing.firstname && t.lastname === thing.lastname) === index);
+
     return (
       <div>
           <span style={{fontWeight: 'bold'}}>{users.length ?

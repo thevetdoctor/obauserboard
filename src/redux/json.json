@@ -1,0 +1,311 @@
+{
+    "users" : {
+      "-LskzjfM3MUUnNRkb7r7" : {
+        "user" : {
+          "age" : "39",
+          "birthday" : "1980-10-13",
+          "firstname" : "Akingbade",
+          "hobby" : "Public Speaking ",
+          "lastname" : "Alabi"
+        },
+        "userWithID" : {
+          "age" : "39",
+          "birthday" : "1980-10-13",
+          "firstname" : "Akingbade",
+          "hobby" : "Public Speaking ",
+          "lastname" : "Alabi",
+          "userId" : "dc568c5c-42f5-5cc7-98a1-203ff0519d85"
+        }
+      },
+      "-LslFBR-pbFBjkbsFWuw" : {
+        "user" : {
+          "age" : "55",
+          "birthday" : "2019-10-30",
+          "firstname" : "Obafemi",
+          "hobby" : "Cycling",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "55",
+          "birthday" : "2019-10-30",
+          "firstname" : "Obafemi",
+          "hobby" : "Cycling",
+          "lastname" : "Oderanti",
+          "userId" : "53682fa0-9590-52ef-a775-7d2a402d62d6"
+        }
+      },
+      "-LslFBVkxer4AkneizBE" : {
+        "user" : {
+          "age" : "55",
+          "birthday" : "2019-10-30",
+          "firstname" : "Obafemi",
+          "hobby" : "Cycling",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "55",
+          "birthday" : "2019-10-30",
+          "firstname" : "Obafemi",
+          "hobby" : "Cycling",
+          "lastname" : "Oderanti",
+          "userId" : "53682fa0-9590-52ef-a775-7d2a402d62d6"
+        }
+      },
+      "-Lslbru6ZYTrX75J4NVS" : {
+        "user" : {
+          "age" : "25",
+          "birthday" : "1980-01-01",
+          "firstname" : "Chelsey Dietrich",
+          "hobby" : "travelling",
+          "lastname" : "Kamren"
+        },
+        "userWithID" : {
+          "age" : "25",
+          "birthday" : "1980-01-01",
+          "firstname" : "Chelsey Dietrich",
+          "hobby" : "travelling",
+          "lastname" : "Kamren",
+          "userId" : "2bad3dc5-9580-570c-ae9e-8044c970c11b"
+        }
+      },
+      "-Lslbs-ODQgwi1IVqWPU" : {
+        "user" : {
+          "age" : "25",
+          "birthday" : "1980-01-01",
+          "firstname" : "Chelsey Dietrich",
+          "hobby" : "travelling",
+          "lastname" : "Kamren"
+        },
+        "userWithID" : {
+          "age" : "25",
+          "birthday" : "1980-01-01",
+          "firstname" : "Chelsey Dietrich",
+          "hobby" : "travelling",
+          "lastname" : "Kamren",
+          "userId" : "2bad3dc5-9580-570c-ae9e-8044c970c11b"
+        }
+      },
+      "-Lslj1KJhbTW81eMQEgH" : {
+        "user" : {
+          "age" : "25",
+          "birthday" : "1980-01-01",
+          "firstname" : "Clementine Bauch",
+          "hobby" : "travelling",
+          "lastname" : "Samantha"
+        },
+        "userWithID" : {
+          "age" : "25",
+          "birthday" : "1980-01-01",
+          "firstname" : "Clementine Bauch",
+          "hobby" : "travelling",
+          "lastname" : "Samantha",
+          "userId" : "968368f0-84e1-50ba-be90-61b83b4c06ee"
+        }
+      },
+      "-Lslj1vKtEyGHQ_A9bAF" : {
+        "user" : {
+          "age" : "25",
+          "birthday" : "1980-01-01",
+          "firstname" : "Clementine Bauch",
+          "hobby" : "travelling",
+          "lastname" : "Samantha"
+        },
+        "userWithID" : {
+          "age" : "25",
+          "birthday" : "1980-01-01",
+          "firstname" : "Clementine Bauch",
+          "hobby" : "travelling",
+          "lastname" : "Samantha",
+          "userId" : "968368f0-84e1-50ba-be90-61b83b4c06ee"
+        }
+      },
+      "-LslmJvoo3l9slDCRK0g" : {
+        "user" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti",
+          "userId" : "7cceb52f-71fc-5d9a-b82d-3d2812896fd1"
+        }
+      },
+      "-LslmKALlYXBhavo0Zh3" : {
+        "user" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti",
+          "userId" : "7cceb52f-71fc-5d9a-b82d-3d2812896fd1"
+        }
+      },
+      "-LsluK1RxgdReLXBHx5M" : {
+        "user" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti",
+          "userId" : "7cceb52f-71fc-5d9a-b82d-3d2812896fd1"
+        }
+      },
+      "-LsluKANyRSK8V-9UkkG" : {
+        "user" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti",
+          "userId" : "7cceb52f-71fc-5d9a-b82d-3d2812896fd1"
+        }
+      },
+      "-LsluWM3mY6J3LXEZYSI" : {
+        "user" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti",
+          "userId" : "7cceb52f-71fc-5d9a-b82d-3d2812896fd1"
+        }
+      },
+      "-LsluWSOfSJxNfHm95wK" : {
+        "user" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti",
+          "userId" : "7cceb52f-71fc-5d9a-b82d-3d2812896fd1"
+        }
+      },
+      "-LslwAkQLrJ4aolNdiYt" : {
+        "user" : {
+          "age" : "4",
+          "birthday" : "2019-09-16",
+          "firstname" : "Demi",
+          "hobby" : "reading",
+          "lastname" : "Ode"
+        },
+        "userWithID" : {
+          "age" : "4",
+          "birthday" : "2019-09-16",
+          "firstname" : "Demi",
+          "hobby" : "reading",
+          "lastname" : "Ode",
+          "userId" : "4443352a-340c-537e-af1a-a71a970ad0a4"
+        }
+      },
+      "-LslwBM6UcNkeblbKxkI" : {
+        "user" : {
+          "age" : "4",
+          "birthday" : "2019-09-16",
+          "firstname" : "Demi",
+          "hobby" : "reading",
+          "lastname" : "Ode"
+        },
+        "userWithID" : {
+          "age" : "4",
+          "birthday" : "2019-09-16",
+          "firstname" : "Demi",
+          "hobby" : "reading",
+          "lastname" : "Ode",
+          "userId" : "4443352a-340c-537e-af1a-a71a970ad0a4"
+        }
+      },
+      "-LslwEsUEeSFktW4c6j7" : {
+        "user" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti",
+          "userId" : "7cceb52f-71fc-5d9a-b82d-3d2812896fd1"
+        }
+      },
+      "-LslwFiCZYKsb6yaLqMw" : {
+        "user" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti",
+          "userId" : "7cceb52f-71fc-5d9a-b82d-3d2812896fd1"
+        }
+      },
+      "-LslwoqRfSR0gHFdjPEa" : {
+        "user" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti"
+        },
+        "userWithID" : {
+          "age" : "38",
+          "birthday" : "2019-09-16",
+          "firstname" : "Oyetoke",
+          "hobby" : "reading",
+          "lastname" : "Oderanti",
+          "userId" : "7cceb52f-71fc-5d9a-b82d-3d2812896fd1"
+        }
+      }
+    }
+  }
+  

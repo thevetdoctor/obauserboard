@@ -19,9 +19,9 @@ const name = useSelector(state => state.name);
 const errorMessage = useSelector(state => state.errorMessage);
 const users = useSelector(state => state.users);
 const formview = useSelector(state => state.formView);
-// const apiData = useSelector(state => state.apiData);
+const apiData = useSelector(state => state.apiData);
 // const apiError = useSelector(state => state.error);
-// const loading = useSelector(state => state.loading);
+const loading = useSelector(state => state.loading);
 
 const handleDelete = (id) => {
 
@@ -39,6 +39,26 @@ const clearTable = () => {
   type: 'DELETE_USERS',
 });
 
+}
+
+const handleSaga = () => {
+
+  store.dispatch({
+  type: 'GET_DATA',
+});
+// handleLoading();
+// setTimeout(() => handleLoading(), 2000);
+
+}
+ 
+
+const handleLoading = () => {
+
+  store.dispatch({
+  type: 'LOADING',
+}); 
+setTimeout(() => handleSaga(), 4000);
+// handleSaga();
 }
 
 
@@ -116,7 +136,24 @@ for (let item in formValues) {
   // console.log('submitted', 'newUser =>', user);
 } 
 
-
+const populate = () => {
+  // console.log('populate is disabled for now');
+// let newUser = JSON.parse(localStorage.getItem('usersDB'));
+    // console.log(newUser.apiData.length);
+    let count = Math.floor(Math.random() * 5);
+    if (apiData) {
+    // console.log(apiData[count], newUser);
+    store.dispatch({
+      type: 'LOAD_DATA',
+      user: apiData[count] || {firstname: 'Oyetoke',
+                                lastname: 'Oderanti',
+                                birthday: '2019-09-16', 
+                                age: 38, 
+                                hobby: 'reading'}
+    });
+    }
+  return;
+}
 
     return (
       <div  className='text-underlined'>
@@ -133,7 +170,17 @@ for (let item in formValues) {
               :
               <span className='btn' onClick={viewForm}><Icon type="close-circle" /></span>
             }
-             
+             {loading ?
+                  <span className='btn'><Icon type="loading" /></span>
+              :
+                <span>{(apiData && apiData.length) ?
+                <span className='btn populate-data' onClick={() => populate()}><Icon type="login"/></span>
+                   :
+                  <span className='btn random-data' onClick={() => handleLoading()}><Icon type="cloud-download"/></span>
+
+                  
+                }</span>
+            }
         </div>
         </div>
         {formview ? 

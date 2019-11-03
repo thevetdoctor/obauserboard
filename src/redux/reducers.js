@@ -1,57 +1,67 @@
 import userActions from './actions';
-import getID from './getID';
+// import json from './json.json'
 
 
 const initialState = JSON.parse(localStorage.getItem('usersDB')) || {
+// const initialState = {
     name: 'User Board!',
     errorMessage: '', 
     formView: true, 
     loading: false,  
     users: [
-        {firstname: 'Oba',  
-        lastname: 'Ode',
-        birthday: '2019-09-16',  
-        age: 34, 
-        hobby: 'swimming'},
+        // {firstname: 'Oba',  
+        // lastname: 'Ode',
+        // birthday: '2019-09-16',  
+        // age: 34, 
+        // hobby: 'swimming'},
            
-        {firstname: 'Dami', 
-        lastname: 'Ode', 
-        birthday: '2019-09-16', 
-        age: 4, 
-        hobby: 'reading'}, 
+        // {firstname: 'Dami', 
+        // lastname: 'Ode', 
+        // birthday: '2019-09-16', 
+        // age: 4, 
+        // hobby: 'reading'}, 
         
-        {firstname: 'Demi', 
-        lastname: 'Ode', 
-        birthday: '2019-09-16',
-        age: 4, 
-        hobby: 'reading'},
+        // {firstname: 'Demi', 
+        // lastname: 'Ode', 
+        // birthday: '2019-09-16',
+        // age: 4, 
+        // hobby: 'reading'},
 
-        {firstname: 'Toke',
-        lastname: 'Ode',
-        birthday: '2019-09-16', 
-        age: 4, 
-        hobby: 'reading'},
+        // {firstname: 'Toke',
+        // lastname: 'Ode',
+        // birthday: '2019-09-16', 
+        // age: 4, 
+        // hobby: 'reading'},
       ]
 }; 
 
+// let usersWithID = [];
+// console.log(Object.values(json.users));
+// console.log(Object.values(json.users).map(x => x.userWithID));
+//       for (let key of Object.values(json.users)) {
+//         console.log(json[key]);
+//         usersWithID.push(json[key]);
+//       }
+
+      // console.log(usersWithID);
 
 const updateUserReducer = (state = initialState, actions) => {
 
   switch(actions.type) {
   case userActions.addUser.type:
-      // console.log('Data sent to DB =>', actions.data);
-
-      const { newUser } = actions.data;
-      let newData = Object.assign({}, newUser);
-
-      let userWithID = getID(newData);
-      let newUserList0 = [ ...state.users ];
-          newUserList0.push(userWithID);
+      console.log('data from firebase', Object.values(actions.data));
       
+      console.log(Object.values(actions.data.users));
+      const usersWithID = Object.values(actions.data.users).map(x => x.userWithID);
+
+      console.log(usersWithID);
+      let newUser = usersWithID[usersWithID.length - 2];
+      let newUserList0 = [ ...state.users ];
+          newUserList0.push(newUser);
+
       let newState0 = Object.assign({}, state, {
         ...state, users: newUserList0,
         });
-      // console.log('new user added', newUser, userWithID);
       localStorage.setItem('usersDB', JSON.stringify(newState0));
 
   return newState0; 
